@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/medical-center/static/css/main.f855e6bc.css",
+    "main.js": "/medical-center/static/js/main.0f62b016.js",
+    "static/js/453.b8c37e5b.chunk.js": "/medical-center/static/js/453.b8c37e5b.chunk.js",
+    "index.html": "/medical-center/index.html",
+    "main.f855e6bc.css.map": "/medical-center/static/css/main.f855e6bc.css.map",
+    "main.0f62b016.js.map": "/medical-center/static/js/main.0f62b016.js.map",
+    "453.b8c37e5b.chunk.js.map": "/medical-center/static/js/453.b8c37e5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.0f62b016.js"
+  ]
+}
