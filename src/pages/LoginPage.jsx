@@ -1,48 +1,32 @@
-import React, {useContext, useState} from "react";
-import axios from "axios";
-import {ResourcePath} from "../dto/ResourcePath";
-import { jwtDecode } from "jwt-decode";
+import React, {useContext} from "react";
+
+import "./pages.css";
+import LoginComponent from "../component/LoginComponent";
+import RegisterComponent from "../component/RegisterComponent";
 import {MedicalCenterContext} from "../context/MedicalCenterContext";
 
 const LoginPage = () => {
 
-    const {setUserContext} = useContext(MedicalCenterContext);
+    const {user} = useContext(MedicalCenterContext);
 
-    const [loginUser, setLoginUser] = useState({
-        email: "",
-        password: ""
-    });
-
-    const handleChange = (e) => {
-        setLoginUser({
-            ...loginUser,
-            [e.target.name]: e.target.value
-        });
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(loginUser);
-        axios.post(ResourcePath.API + ResourcePath.AUTH, loginUser)
-            .then(res => {
-                const user = jwtDecode(res.data.token);
-                setUserContext(user);
-                console.log(user);
-                window.location.href = ResourcePath.HOME;
-            })
-            .catch(err => {
-                console.log(err);
-            });
+    const isUserLoggedIn = () => {
+        return user.id !== 0;
     }
 
     return (
-        <div>
-            <h1>Login Page</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="email" name="email" value={loginUser.email} onChange={handleChange} placeholder="Email" />
-                <input type="password" name="password" value={loginUser.password} onChange={handleChange} placeholder="Password" />
-                <button type="submit">Login</button>
-            </form>
+        <div className="login-page container">
+            <div className={`login-container ${isUserLoggedIn() ? "hidden-div" : null} `}>
+                <div className="login-header">
+                    <h1>Login</h1>
+                </div>
+                <LoginComponent/>
+            </div>
+            <div className="register-container">
+                <div className="login-header">
+                    <h1>Register</h1>
+                </div>
+                <RegisterComponent/>
+            </div>
         </div>
     );
 }

@@ -1,0 +1,58 @@
+.login-page {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login-page .login-header{
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+}
+
+.login-container, .register-container {
+    width: 40%;
+    margin: 2rem;
+}
+
+.project-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.project-form .form-group{
+    margin: 0.5rem 0;
+}
+
+
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root,
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    width: 100%;
+}
+.project-form input {
+    width: 100%;
+    color: #F5F5F5;
+}
+
+.project-form button {
+    color: #F5F5F5;
+    border-color: #F5F5F5;
+}
+.project-form .submit{
+    width: 100%;
+}
+.project-form .submit:hover {
+    color: #181818;
+    background-color: #F5F5F5;
+}
+
+.hidden-div {
+    display: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
