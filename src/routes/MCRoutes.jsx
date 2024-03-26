@@ -9,6 +9,7 @@ import DoctorDashBoard from "../pages/doctor/DoctorDashBoard";
 import PatientDashBoard from "../pages/patient/PatientDashBoard";
 import WelcomePage from "../pages/WelcomePage";
 import LoginPage from "../pages/LoginPage";
+import NavBarComponent from "../component/NavBarComponent";
 
 const MCRoutes = () => {
 
@@ -29,6 +30,8 @@ const MCRoutes = () => {
 
     return (
         <BrowserRouter>
+            <NavBarComponent/>
+            <br/><br/><br/>
             <Routes>
                 <Route path={ResourcePath.HOME} element={getHomeElement()}/>
                 <Route path={ResourcePath.LOGIN} element={<LoginPage/>}/>
