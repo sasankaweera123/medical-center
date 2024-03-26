@@ -56,3 +56,63 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+
+.image-title{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #F5F5F5;
+}
+
+.image-icons{
+    width: 35%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.image-icons svg{
+    font-size: 2.5rem;
+}
+
+.image-icons .person-icon svg{
+    color: #61dafb;
+}
+
+.image-icons .hospital-icon svg{
+    color: red;
+}
+
+.image-icons .admin-icon svg{
+    color: chartreuse;
+}
+
+@media (max-width: 768px) {
+    .main-banner-desktop{
+        display: none;
+    }
+    .main-banner-mobile{
+        display: block;
+        filter: brightness(30%);
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-banner-desktop{
+        display: block;
+        filter: brightness(30%);
+        overflow: hidden;
+    }
+    .main-banner-mobile{
+        display: none;
+    }
+}
+
+.image-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}

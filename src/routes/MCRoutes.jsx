@@ -10,6 +10,7 @@ import PatientDashBoard from "../pages/patient/PatientDashBoard";
 import WelcomePage from "../pages/WelcomePage";
 import LoginPage from "../pages/LoginPage";
 import NavBarComponent from "../component/NavBarComponent";
+import OurDoctorsPage from "../pages/OurDoctorsPage";
 
 const MCRoutes = () => {
 
@@ -31,11 +32,11 @@ const MCRoutes = () => {
     return (
         <BrowserRouter>
             <NavBarComponent/>
-            <br/><br/><br/>
             <Routes>
                 <Route path={ResourcePath.HOME} element={getHomeElement()}/>
                 <Route path={ResourcePath.LOGIN} element={<LoginPage/>}/>
                 <Route path={ResourcePath.ERROR} element={<ErrorPage/>}/>
+                <Route path={ResourcePath.DOCTOR} element={<OurDoctorsPage/>}/>
                 <Route path="*" element={<ErrorPage/>}/>
             </Routes>
         </BrowserRouter>

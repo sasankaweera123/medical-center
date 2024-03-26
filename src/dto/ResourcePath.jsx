@@ -36,6 +36,8 @@ export const ResourcePath =  {
 
     // User
     USER: '/user',
+    USER_DOCTORS: '/user/doctors',
+    USER_PATIENTS: '/user/patients',
     USER_PROFILE: '/user/profile',
     USER_UPDATE: '/user/update',
     USER_DELETE: '/user/delete',
@@ -46,6 +48,10 @@ export const ResourcePath =  {
     APPOINTMENT_CREATE: '/appointment/create',
     APPOINTMENT_UPDATE: '/appointment/update',
     APPOINTMENT_DELETE: '/appointment/delete',
+
+    // Resource
+    MAIN_BANNER_DESKTOP: 'https://avionic-design.de/assets/images/7/Medical_Header-1efb6809.jpg',
+    MAIN_BANNER_MOBILE: 'https://timesofindia.indiatimes.com/photo/108759573/108759573.jpg',
 
 
 }

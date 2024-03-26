@@ -25,8 +25,6 @@ const NavBarComponent = () => {
         }
     }
 
-
-
     return (
         <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary " bg="dark" data-bs-theme="dark" fixed="top">
             <Container>
