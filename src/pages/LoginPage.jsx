@@ -14,7 +14,7 @@ const LoginPage = () => {
     }
 
     return (
-        <div className="login-page container">
+        <div className="login-page container my-5 py-5">
             <div className={`login-container ${isUserLoggedIn() ? "hidden-div" : null} `}>
                 <div className="login-header">
                     <h1>Login</h1>

@@ -14,15 +14,9 @@ const WelcomePage = () => {
                 <Card.ImgOverlay className="image-text">
                     <Card.Title className="image-title">Welcome <br/> Medical Center</Card.Title>
                     <Card.Text className="image-icons">
-                        <div className="person-icon">
-                            <Person4Icon/>
-                        </div>
-                        <div className="hospital-icon">
-                            <LocalHospitalIcon/>
-                        </div>
-                        <div className="admin-icon">
-                            <AdminPanelSettingsIcon/>
-                        </div>
+                        <Person4Icon className="person-icon"/>
+                        <LocalHospitalIcon className="hospital-icon"/>
+                        <AdminPanelSettingsIcon className="admin-icon"/>
                     </Card.Text>
                     <Card.Text className="image-body">
                         Medical Center is a platform where you can find the best doctors and book appointments with

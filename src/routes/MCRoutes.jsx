@@ -9,8 +9,8 @@ import DoctorDashBoard from "../pages/doctor/DoctorDashBoard";
 import PatientDashBoard from "../pages/patient/PatientDashBoard";
 import WelcomePage from "../pages/WelcomePage";
 import LoginPage from "../pages/LoginPage";
-import NavBarComponent from "../component/NavBarComponent";
-import OurDoctorsPage from "../pages/OurDoctorsPage";
+import OurUsersPage from "../pages/OurUsersPage";
+import AvailableAppointmentsPage from "../pages/AvailableAppointmemtsPage";
 
 const MCRoutes = () => {
 
@@ -31,12 +31,13 @@ const MCRoutes = () => {
 
     return (
         <BrowserRouter>
-            <NavBarComponent/>
             <Routes>
                 <Route path={ResourcePath.HOME} element={getHomeElement()}/>
                 <Route path={ResourcePath.LOGIN} element={<LoginPage/>}/>
                 <Route path={ResourcePath.ERROR} element={<ErrorPage/>}/>
-                <Route path={ResourcePath.DOCTOR} element={<OurDoctorsPage/>}/>
+                <Route path={ResourcePath.USERS} element={<OurUsersPage/>}/>
+                <Route path={ResourcePath.ADMIN_USERS} element={<OurUsersPage/>}/>
+                <Route path={ResourcePath.USER_AVAILABLE_APPOINTMENTS} element={<AvailableAppointmentsPage/>}/>
                 <Route path="*" element={<ErrorPage/>}/>
             </Routes>
         </BrowserRouter>

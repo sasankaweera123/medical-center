@@ -71,11 +71,127 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "api/v1/user/doctors",
+      "endpoint": "api/v1/users",
       "responses": [
         {
           "uuid": "8d9cf5bb-c431-47ab-96de-3b7160e5ed9e",
-          "body": "{\n  \"users\": [\n    {\n      \"id\": \"D0001\",\n      \"firstName\": \"Terry\",\n      \"lastName\": \"Medhurst\",\n      \"gender\": \"male\",\n      \"email\": \"atuny0@sohu.com\",\n      \"image\": \"https://robohash.org/Terry.png?set=set4\",\n      \"department\": \"Marketing\"\n    },\n    {\n      \"id\": \"D0002\",\n      \"firstName\": \"Alice\",\n      \"lastName\": \"Johnson\",\n      \"gender\": \"female\",\n      \"email\": \"alice.johnson@example.com\",\n      \"image\": \"https://robohash.org/Sheldon.png?set=set4\",\n      \"department\": \"HR\"\n    },\n    {\n      \"id\": \"D0003\",\n      \"firstName\": \"Michael\",\n      \"lastName\": \"Smith\",\n      \"gender\": \"male\",\n      \"email\": \"michael.smith@example.com\",\n      \"image\": \"https://robohash.org/Terrill.png?set=set4\",\n      \"department\": \"Finance\"\n    },\n    {\n      \"id\": \"D0004\",\n      \"firstName\": \"Emily\",\n      \"lastName\": \"Brown\",\n      \"gender\": \"female\",\n      \"email\": \"emily.brown@example.com\",\n      \"image\": \"https://robohash.org/Miles.png?set=set4\",\n      \"department\": \"IT\"\n    },\n    {\n      \"id\": \"D0005\",\n      \"firstName\": \"David\",\n      \"lastName\": \"Miller\",\n      \"gender\": \"male\",\n      \"email\": \"david.miller@example.com\",\n      \"image\": \"https://robohash.org/Mavis.png?set=set4\",\n      \"department\": \"Sales\"\n    },\n    {\n      \"id\": \"D0006\",\n      \"firstName\": \"Dr. Sarah\",\n      \"lastName\": \"Chang\",\n      \"gender\": \"female\",\n      \"email\": \"sarah.chang@example.com\",\n      \"image\": \"https://robohash.org/Alison.png?set=set4\",\n      \"department\": \"Cardiology\"\n    },\n    {\n      \"id\": \"D0007\",\n      \"firstName\": \"Dr. Kevin\",\n      \"lastName\": \"Nguyen\",\n      \"gender\": \"male\",\n      \"email\": \"kevin.nguyen@example.com\",\n      \"image\": \"https://robohash.org/Oleta.png?set=set4\",\n      \"department\": \"Neurology\"\n    },\n    {\n      \"id\": \"D0008\",\n      \"firstName\": \"Dr. Maria\",\n      \"lastName\": \"Garcia\",\n      \"gender\": \"female\",\n      \"email\": \"maria.garcia@example.com\",\n      \"image\": \"https://robohash.org/Maria.png?set=set4\",\n      \"department\": \"Pediatrics\"\n    },\n    {\n      \"id\": \"D0009\",\n      \"firstName\": \"Dr. Jonathan\",\n      \"lastName\": \"Lee\",\n      \"gender\": \"male\",\n      \"email\": \"jonathan.lee@example.com\",\n      \"image\": \"https://robohash.org/Ewell.png?set=set4\",\n      \"department\": \"Orthopedics\"\n    },\n    {\n      \"id\": \"D0010\",\n      \"firstName\": \"Dr. Anna\",\n      \"lastName\": \"Wang\",\n      \"gender\": \"female\",\n      \"email\": \"anna.wang@example.com\",\n      \"image\": \"https://robohash.org/Anna.png?set=set4\",\n      \"department\": \"Oncology\"\n    },\n    {\n      \"id\": \"D0011\",\n      \"firstName\": \"Dr. William\",\n      \"lastName\": \"Jones\",\n      \"gender\": \"male\",\n      \"email\": \"william.jones@example.com\",\n      \"image\": \"https://robohash.org/Ewell.png?set=set4\",\n      \"department\": \"Dermatology\"\n    },\n    {\n      \"id\": \"D0012\",\n      \"firstName\": \"Dr. Jennifer\",\n      \"lastName\": \"White\",\n      \"gender\": \"female\",\n      \"email\": \"jennifer.white@example.com\",\n      \"image\": \"https://robohash.org/Jennifer.png?set=set4\",\n      \"department\": \"Endocrinology\"\n    },\n    {\n      \"id\": \"D0013\",\n      \"firstName\": \"Dr. Robert\",\n      \"lastName\": \"Davis\",\n      \"gender\": \"male\",\n      \"email\": \"robert.davis@example.com\",\n      \"image\": \"https://robohash.org/Robert.png?set=set4\",\n      \"department\": \"Gastroenterology\"\n    },\n    {\n      \"id\": \"D0014\",\n      \"firstName\": \"Dr. Samantha\",\n      \"lastName\": \"Wilson\",\n      \"gender\": \"female\",\n      \"email\": \"samantha.wilson@example.com\",\n      \"image\": \"https://robohash.org/Samantha.png?set=set4\",\n      \"department\": \"Hematology\"\n    },\n    {\n      \"id\": \"D0015\",\n      \"firstName\": \"Dr. Daniel\",\n      \"lastName\": \"Martinez\",\n      \"gender\": \"male\",\n      \"email\": \"daniel.martinez@example.com\",\n      \"image\": \"https://robohash.org/Ewell.png?set=set4\",\n      \"department\": \"Radiology\"\n    }\n  ]\n}",
+          "body": "{\n  \"users\": [\n    {\n      \"id\": \"D0001\",\n      \"prefix\": \"\",\n      \"name\": \"Terry Medhurst\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"male\",\n      \"email\": \"atuny0@sohu.com\",\n      \"image\": \"https://robohash.org/Terry.png?set=set4\",\n      \"department\": \"Marketing\"\n    },\n    {\n      \"id\": \"D0002\",\n      \"prefix\": \"\",\n      \"name\": \"Alice Johnson\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"female\",\n      \"email\": \"alice.johnson@example.com\",\n      \"image\": \"https://robohash.org/Sheldon.png?set=set4\",\n      \"department\": \"HR\"\n    },\n    {\n      \"id\": \"D0003\",\n      \"prefix\": \"\",\n      \"name\": \"Michael Smith\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"male\",\n      \"email\": \"michael.smith@example.com\",\n      \"image\": \"https://robohash.org/Terrill.png?set=set4\",\n      \"department\": \"Finance\"\n    },\n    {\n      \"id\": \"D0004\",\n      \"prefix\": \"\",\n      \"name\": \"Emily Brown\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"female\",\n      \"email\": \"emily.brown@example.com\",\n      \"image\": \"https://robohash.org/Miles.png?set=set4\",\n      \"department\": \"IT\"\n    },\n    {\n      \"id\": \"D0005\",\n      \"prefix\": \"\",\n      \"name\": \"David Miller\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"male\",\n      \"email\": \"david.miller@example.com\",\n      \"image\": \"https://robohash.org/Mavis.png?set=set4\",\n      \"department\": \"Sales\"\n    },\n    {\n      \"id\": \"D0006\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Sarah Chang\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"sarah.chang@example.com\",\n      \"image\": \"https://robohash.org/Alison.png?set=set4\",\n      \"department\": \"Cardiology\"\n    },\n    {\n      \"id\": \"D0007\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Kevin Nguyen\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"kevin.nguyen@example.com\",\n      \"image\": \"https://robohash.org/Oleta.png?set=set4\",\n      \"department\": \"Neurology\"\n    },\n    {\n      \"id\": \"D0008\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Maria Garcia\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"maria.garcia@example.com\",\n      \"image\": \"https://robohash.org/Maria.png?set=set4\",\n      \"department\": \"Pediatrics\"\n    },\n    {\n      \"id\": \"D0009\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Jonathan Lee\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"jonathan.lee@example.com\",\n      \"image\": \"https://robohash.org/Ewell.png?set=set4\",\n      \"department\": \"Orthopedics\"\n    },\n    {\n      \"id\": \"D0010\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Anna Wang\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"anna.wang@example.com\",\n      \"image\": \"https://robohash.org/Anna.png?set=set4\",\n      \"department\": \"Oncology\"\n    },\n    {\n      \"id\": \"D0011\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"William Jones\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"william.jones@example.com\",\n      \"image\": \"https://robohash.org/Ewell.png?set=set4\",\n      \"department\": \"Dermatology\"\n    },\n    {\n      \"id\": \"D0012\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Jennifer White\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"jennifer.white@example.com\",\n      \"image\": \"https://robohash.org/Jennifer.png?set=set4\",\n      \"department\": \"Endocrinology\"\n    },\n    {\n      \"id\": \"D0013\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Robert Davis\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"robert.davis@example.com\",\n      \"image\": \"https://robohash.org/Robert.png?set=set4\",\n      \"department\": \"Gastroenterology\"\n    },\n    {\n      \"id\": \"D0014\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Samantha Wilson\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"samantha.wilson@example.com\",\n      \"image\": \"https://robohash.org/Samantha.png?set=set4\",\n      \"department\": \"Hematology\"\n    },\n    {\n      \"id\": \"D0015\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Daniel Martinez\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"daniel.martinez@example.com\",\n      \"image\": \"https://robohash.org/Ewell.png?set=set4\",\n      \"department\": \"Radiology\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "e43de2fe-568e-4b3f-8969-c9913f3aa35c",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/v1/appointment/available",
+      "responses": [
+        {
+          "uuid": "ef271cdd-2271-47b9-900d-9583b1eff4c0",
+          "body": "{\n  \"data\": [\n    {\n      \"doctorId\": \"D0006\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"09:00\",\n          \"toTime\": \"10:00\",\n          \"availableCount\": 3\n        },\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"10:00\",\n          \"toTime\": \"11:00\",\n          \"availableCount\": 2\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0007\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"11:00\",\n          \"toTime\": \"12:00\",\n          \"availableCount\": 1\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0008\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"13:00\",\n          \"toTime\": \"14:00\",\n          \"availableCount\": 4\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0009\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"14:00\",\n          \"toTime\": \"15:00\",\n          \"availableCount\": 2\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0010\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"15:00\",\n          \"toTime\": \"16:00\",\n          \"availableCount\": 5\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0011\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"16:00\",\n          \"toTime\": \"17:00\",\n          \"availableCount\": 3\n        },\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"17:00\",\n          \"toTime\": \"18:00\",\n          \"availableCount\": 4\n        }\n      ]\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "6ab2bd76-4af7-44d9-b6b8-08ac3e796796",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/v1/appointment/create",
+      "responses": [
+        {
+          "uuid": "eb6f17c4-885f-425d-8e96-46173735f276",
+          "body": "{\n  \"data\": \"Sucessfully Created\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "b76364f0-f4c8-45c0-93fe-c291c153daf5",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "api/v1/user/update",
+      "responses": [
+        {
+          "uuid": "b2b96a31-25fe-49e1-881a-8e1ba26ad566",
+          "body": "{\n  \"data\": \"Sucessfully User Updated\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "505692cf-7afe-4512-9c29-bafed8e4b953",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "api/v1/user/delete/:id",
+      "responses": [
+        {
+          "uuid": "d12a2ddb-34e0-4465-8ff7-64d948a868b9",
+          "body": "{\n  \"data\": \"Sucessfully Deleted\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -108,6 +224,22 @@
     {
       "type": "route",
       "uuid": "dd22e2c2-c67b-4572-a22a-a523f0d358db"
+    },
+    {
+      "type": "route",
+      "uuid": "e43de2fe-568e-4b3f-8969-c9913f3aa35c"
+    },
+    {
+      "type": "route",
+      "uuid": "6ab2bd76-4af7-44d9-b6b8-08ac3e796796"
+    },
+    {
+      "type": "route",
+      "uuid": "b76364f0-f4c8-45c0-93fe-c291c153daf5"
+    },
+    {
+      "type": "route",
+      "uuid": "505692cf-7afe-4512-9c29-bafed8e4b953"
     }
   ],
   "proxyMode": false,

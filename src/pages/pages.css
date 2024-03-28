@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.login-page .login-header{
+.login-page .login-header {
     width: 100%;
     text-align: center;
     margin: 2rem;
@@ -24,31 +24,38 @@
     flex-wrap: wrap;
 }
 
-.project-form .form-group{
+.project-form .form-group {
     margin: 0.5rem 0;
 }
 
 
 .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root,
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
-    width: 100%;
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root,
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root,
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    width: 80%;
+    color: #F5F5F5 !important;
 }
-.project-form input {
-    width: 100%;
+
+.project-form input, .search-form input {
+    width: 80%;
     color: #F5F5F5;
 }
 
-.project-form button {
+.project-form button, .nav-bar-col button, .appointments-list button {
     color: #F5F5F5;
     border-color: #F5F5F5;
 }
-.project-form .submit{
-    width: 100%;
-}
-.project-form .submit:hover {
+
+.nav-bar-col button:hover, .project-form .submit:hover, .appointments-list button:hover {
     color: #181818;
     background-color: #F5F5F5;
 }
+
+.project-form .submit {
+    width: 80%;
+}
+
 
 .hidden-div {
     display: none;
@@ -57,40 +64,41 @@
     overflow-wrap: break-word;
 }
 
-.image-title{
+.image-title {
     font-size: 5rem;
     font-weight: 700;
     color: #F5F5F5;
 }
 
-.image-icons{
+.image-icons {
     width: 35%;
     padding: 2rem 0;
     display: flex;
     justify-content: space-evenly;
 }
 
-.image-icons svg{
+.image-icons svg {
     font-size: 2.5rem;
 }
 
-.image-icons .person-icon svg{
+.image-icons .person-icon {
     color: #61dafb;
 }
 
-.image-icons .hospital-icon svg{
+.image-icons .hospital-icon {
     color: red;
 }
 
-.image-icons .admin-icon svg{
+.image-icons .admin-icon {
     color: chartreuse;
 }
 
 @media (max-width: 768px) {
-    .main-banner-desktop{
+    .main-banner-desktop {
         display: none;
     }
-    .main-banner-mobile{
+
+    .main-banner-mobile {
         display: block;
         filter: brightness(30%);
         overflow: hidden;
@@ -98,21 +106,147 @@
 }
 
 @media (min-width: 768px) {
-    .main-banner-desktop{
+    .main-banner-desktop {
         display: block;
         filter: brightness(30%);
         overflow: hidden;
     }
-    .main-banner-mobile{
+
+    .main-banner-mobile {
         display: none;
     }
 }
 
-.image-text{
+.image-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
+}
+
+.card-component {
+    width: 28rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.page-header {
+    text-align: center;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.male {
+    color: #61dafb;
+}
+
+.female {
+    color: #ff69b4;
+}
+
+.button-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-group .edit-icon {
+    color: #61dafb;
+}
+
+.button-group .delete-icon {
+    color: red;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.search-form .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    margin: 2rem;
+}
+
+footer {
+    text-align: center;
+    background-color: #181818;
+    color: #F5F5F5;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-text a {
+    text-decoration: none;
+    color: #61dafb;
+    font-style: italic;
+}
+
+.appointments-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.appointments-list .available-capacity{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.appointments-list .available-capacity .count{
+    font-size: 5rem;
+    color: #61dafb;
+}
+
+.appointments-list .available-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-modal .modal-content {
+    background-color: #181818;
+    color: #F5F5F5;
+}
+
+.dark-modal .modal-header,
+.dark-modal .modal-footer {
+    border-color:#181818;
+}
+
+.dark-modal .modal-header button.close {
+    color: #F5F5F5;
+}
+
+.dark-modal .modal-footer button.btn-primary {
+    background-color: #61dafb;
+    border-color: #61dafb;
+}
+
+.dark-modal .modal-footer button.btn-primary:hover {
+    background-color: #61dafb;
+    border-color: #61dafb;
 }
