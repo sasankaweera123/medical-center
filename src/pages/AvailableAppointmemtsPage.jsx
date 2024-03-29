@@ -1,10 +1,9 @@
 import React, {useContext, useEffect, useState} from "react";
-import {OutlinedInput, Select, MenuItem, TextField, Typography, CardContent} from "@mui/material";
+import {Select, MenuItem, TextField} from "@mui/material";
 import {MedicalCenterContext} from "../context/MedicalCenterContext";
 import axios from "axios";
 import {ResourcePath} from "../dto/ResourcePath";
 import {AvailableAppointments} from "../dto/AvailableAppointments";
-import Card from "react-bootstrap/Card";
 import AppointmentComponent from "../component/AppointmentComponent";
 
 const AvailableAppointmentsPage = () => {

@@ -2,7 +2,7 @@ import React, {useContext, useState} from "react";
 import {Card, Modal} from "react-bootstrap";
 import MaleIcon from '@mui/icons-material/Male';
 import FemaleIcon from '@mui/icons-material/Female';
-import {Avatar, Button, MenuItem, OutlinedInput, Select, TextField} from "@mui/material";
+import {Avatar, Button, MenuItem, Select, TextField} from "@mui/material";
 import {MedicalCenterContext} from "../context/MedicalCenterContext";
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';

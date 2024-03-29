@@ -250,3 +250,53 @@ footer .footer-text a {
     background-color: #61dafb;
     border-color: #61dafb;
 }
+
+.admin-dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.user-count-card{
+    width: 30rem;
+    text-align: center;
+}
+
+.user-count-card .card-body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.MuiChartsLegend-series text{
+    fill: #F5F5F5 !important;
+}
+
+.department-count-card{
+    width: 25rem;
+}
+.department-count-card .department-header{
+    text-align: center;
+}
+
+.department-count-card .department-count{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.department-count-card p{
+    text-align: center;
+}
+
+.department-count-card p .department-length{
+    font-size: 10rem;
+    color: #61dafb;
+}
+
+.appointment-list-card{
+    width: 100%;
+    text-align: center;
+}
