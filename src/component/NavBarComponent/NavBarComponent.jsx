@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import {ResourcePath} from "../../dto/ResourcePath";
 import Container from 'react-bootstrap/Container';
 import {MedicalCenterContext} from "../../context/MedicalCenterContext";
-import {Button} from "@mui/material";
+import {Avatar, Button} from "@mui/material";
 import AdminNavBar from "../admin/AdminNavBar";
 import DoctorNavBar from "../doctor/DoctorNavBar";
 import PatientNavBar from "../patient/PatientNavBar";
@@ -23,9 +23,14 @@ const NavBarComponent = () => {
         if (isUserLoggedIn) {
             logout();
             setIsUserLoggedIn(false);
+            window.location.href = ResourcePath.HOME;
         } else {
             window.location.href = ResourcePath.LOGIN;
         }
+    }
+
+    const handleProfile = () => {
+        window.location.href = ResourcePath.PROFILE;
     }
 
     return (
@@ -44,6 +49,12 @@ const NavBarComponent = () => {
                         color={`${!isUserLoggedIn ? "primary" : "error"}`}>
                         {`${isUserLoggedIn ? "LogOut" : "Login"}`}
                     </Button>
+                    <Avatar
+                        onClick={handleProfile}
+                        hidden={!isUserLoggedIn}
+                        src={user.image}
+                        sx={{width: 35, height: 35}}
+                        className="avatar m-3"/>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

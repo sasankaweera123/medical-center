@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext} from "react";
 import Card from "react-bootstrap/Card";
 import {MedicalCenterContext} from "../../context/MedicalCenterContext";
 

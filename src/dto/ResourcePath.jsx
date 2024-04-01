@@ -46,7 +46,7 @@ export const ResourcePath =  {
     USER_CREATE: '/user/create',
 
     // Appointment
-    APPOINTMENT: '/appointment',
+    APPOINTMENTS: '/appointment',
     AVAILABLE_APPOINTMENTS: '/appointment/available',
     APPOINTMENT_CREATE: '/appointment/create',
     APPOINTMENT_UPDATE: '/appointment/update',

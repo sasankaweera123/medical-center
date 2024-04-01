@@ -17,7 +17,7 @@ const AvailableAppointmentsPage = () => {
 
 
     useEffect(() => {
-        axios.post(ResourcePath.API + ResourcePath.AVAILABLE_APPOINTMENTS, payload)
+        axios.post(ResourcePath.API + ResourcePath.AVAILABLE_APPOINTMENTS, {...payload})
             .then(response => {
                 console.log(response.data.data);
                 setAvailableAppointments(response.data.data);

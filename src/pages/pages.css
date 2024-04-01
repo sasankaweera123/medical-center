@@ -157,7 +157,7 @@
     color: #ff69b4;
 }
 
-.button-group{
+.button-group {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -211,18 +211,18 @@ footer .footer-text a {
     justify-content: space-evenly;
 }
 
-.appointments-list .available-capacity{
+.appointments-list .available-capacity {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.appointments-list .available-capacity .count{
+.appointments-list .available-capacity .count {
     font-size: 5rem;
     color: #61dafb;
 }
 
-.appointments-list .available-card{
+.appointments-list .available-card {
     display: flex;
     flex-direction: column;
 }
@@ -234,7 +234,7 @@ footer .footer-text a {
 
 .dark-modal .modal-header,
 .dark-modal .modal-footer {
-    border-color:#181818;
+    border-color: #181818;
 }
 
 .dark-modal .modal-header button.close {
@@ -251,35 +251,36 @@ footer .footer-text a {
     border-color: #61dafb;
 }
 
-.admin-dashboard{
+.admin-dashboard {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.user-count-card{
+.user-count-card {
     width: 30rem;
     text-align: center;
 }
 
-.user-count-card .card-body{
+.user-count-card .card-body {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.MuiChartsLegend-series text{
+.MuiChartsLegend-series text {
     fill: #F5F5F5 !important;
 }
 
-.department-count-card{
+.department-count-card {
     width: 25rem;
 }
-.department-count-card .department-header{
+
+.department-count-card .department-header {
     text-align: center;
 }
 
-.department-count-card .department-count{
+.department-count-card .department-count {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -287,16 +288,106 @@ footer .footer-text a {
     flex-wrap: wrap;
 }
 
-.department-count-card p{
+.department-count-card p {
     text-align: center;
 }
 
-.department-count-card p .department-length{
+.department-count-card p .department-length {
     font-size: 10rem;
     color: #61dafb;
 }
 
-.appointment-list-card{
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root,
+.css-1ex1afd-MuiTableCell-root{
+    background-color: #181818 !important;
+    color: #F5F5F5 !important;
+    text-align: center !important;
+}
+
+.css-1ygcj2i-MuiTableCell-root {
+    color: #61dafb !important;
+    text-align: center !important;
+    font-size: 1.2rem !important;
+}
+
+.appointment-table .status-cell {
+    display: flex;
+}
+
+.appointment-list-card {
     width: 100%;
     text-align: center;
+}
+
+.appointments{
+    text-align: center;
+}
+
+.appointment-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ }
+
+.appointment-card{
+    width: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.patient-dashboard h1{
+    text-align: center;
+}
+
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+
+.page-header .group-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header .group-buttons button{
+    margin: 0 1rem;
+}
+
+.profile-details{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem;
+
+}
+.profile-details .profile-picture{
+    width: 20%;
+    margin-right: 1rem;
+}
+label{
+    color: #61dafb !important;
+}
+
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon{
+    color: #61dafb !important;
+}
+
+.name-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem;
+}
+
+.name-form .prefix-container{
+    width: 20%;
+    margin-right: 1rem;
 }

@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from "react";
 import {MedicalCenterContext} from "../../context/MedicalCenterContext";
 import { PieChart } from '@mui/x-charts/PieChart';
 import Card from "react-bootstrap/Card";
-import {CardBody} from "react-bootstrap";
 
 const UserCount = () => {
     const {users} = useContext(MedicalCenterContext);
