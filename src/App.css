@@ -1,3 +1,7 @@
-.App {
-  text-align: center;
-}
+@import "assets/css/LoginPage.css";
+@import "assets/css/OverRide.css";
+@import "assets/css/ProjectForm.css";
+@import "assets/css/Shared.css";
+@import "assets/css/MediaChanges.css";
+@import "assets/css/ProjectNavigarion.css";
+@import "pages/pages.css";

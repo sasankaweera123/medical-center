@@ -1,6 +1,4 @@
 import React, {useContext} from "react";
-
-import "./pages.css";
 import LoginComponent from "../component/LoginComponent";
 import RegisterComponent from "../component/RegisterComponent";
 import {MedicalCenterContext} from "../context/MedicalCenterContext";

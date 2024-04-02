@@ -1,0 +1,37 @@
+footer {
+    text-align: center;
+    background-color: #181818;
+    color: #F5F5F5;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-text a {
+    text-decoration: none;
+    color: #61dafb;
+    font-style: italic;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+
+.page-header .group-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header .group-buttons button {
+    margin: 0 1rem;
+}

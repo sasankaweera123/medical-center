@@ -1,0 +1,18 @@
+.login-page {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login-page .login-header {
+    text-align: center;
+    margin: 2rem;
+}
+
+.login-container, .register-container {
+    width: 40%;
+    margin: 2rem;
+}

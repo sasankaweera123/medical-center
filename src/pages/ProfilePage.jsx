@@ -2,23 +2,24 @@ import React, {useContext, useEffect, useState} from "react";
 import {MedicalCenterContext} from "../context/MedicalCenterContext";
 import axios from "axios";
 import {ResourcePath} from "../dto/ResourcePath";
-import {Avatar, InputLabel, MenuItem, Select, TextField} from "@mui/material";
+import {Avatar, Button, FormControl, InputLabel, MenuItem, Select, styled, TextField} from "@mui/material";
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import {Modal} from "react-bootstrap";
-import {Label} from "@mui/icons-material";
 
 const ProfilePage = () => {
 
-    const {user} = useContext(MedicalCenterContext);
+    const {user,logout} = useContext(MedicalCenterContext);
     const [userDetails, setUserDetails] = useState({});
     const [show, setShow] = useState(false);
+    const [isEdit, setIsEdit] = useState(false);
 
     const [updateUser, setUpdateUser] = useState({
-        prefix: userDetails.prefix,
-        name: userDetails.name,
-        email: userDetails.email,
-        image: userDetails.image
+        prefix: '',
+        name: '',
+        email: '',
+        image: ''
     });
 
     useEffect(() => {
@@ -26,6 +27,12 @@ const ProfilePage = () => {
             .then(response => {
                 console.log(response.data);
                 setUserDetails(response.data);
+                setUpdateUser({
+                    prefix: response.data.prefix,
+                    name: response.data.name,
+                    email: response.data.email,
+                    image: response.data.image
+                });
             }).catch(err => {
             console.log(err);
         });
@@ -38,19 +45,65 @@ const ProfilePage = () => {
         axios.delete(ResourcePath.API + ResourcePath.USER_DELETE + userDetails.id)
             .then(response => {
                 console.log(response.data);
-                alert("User Deleted")
-                document.location.reload();
+                alert("User Deleted");
+                logout();
+                window.location.href = ResourcePath.HOME;
             }).catch(err => {
             console.log(err);
         });
     }
 
     const handleChange = (e) => {
-        setUpdateUser({
-            ...updateUser,
-            [e.target.name]: e.target.value
+        const {name, value} = e.target;
+        setUpdateUser(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    }
+
+    const handleEdit = () => {
+        setIsEdit(!isEdit);
+    }
+
+    const handleUpdate = () => {
+        console.log(updateUser);
+        axios.put(ResourcePath.API + ResourcePath.USER_UPDATE, updateUser)
+            .then(response => {
+                console.log(response.data);
+                alert("User Updated")
+                document.location.reload();
+            }).catch(err => {
+            console.log(err);
         });
     }
+
+    const handleUpdateImage = (e) => {
+        const { name, files } = e.target;
+        if (files.length > 0) {
+            const file = files[0];
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                setUpdateUser(prevState => ({
+                    ...prevState,
+                    [name]: event.target.result // This is the data URL
+                }));
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    const VisuallyHiddenInput = styled('input')({
+        clip: 'rect(0 0 0 0)',
+        clipPath: 'inset(50%)',
+        height: 1,
+        overflow: 'hidden',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        whiteSpace: 'nowrap',
+        width: 1,
+    });
+
 
 
     return (
@@ -58,42 +111,73 @@ const ProfilePage = () => {
             <div className="page-header">
                 <h1>{userDetails.prefix} {userDetails.name}</h1>
                 <div className="group-buttons">
-                    <button className="btn btn-primary"><EditOutlinedIcon/></button>
-                    <button className="btn btn-danger" onClick={handleShow}><DeleteOutlineOutlinedIcon/></button>
+                    <Button
+                        variant="outlined"
+                        className="edit-button"
+                        onClick={handleEdit}
+                        hidden={isEdit}
+                    ><EditOutlinedIcon/></Button>
+                    <Button
+                        variant="outlined"
+                        className="delete-button"
+                        color="error"
+                        onClick={handleShow}
+                        hidden={isEdit}>
+                        <DeleteOutlineOutlinedIcon/></Button>
+                    <Button
+                        variant="outlined"
+                        className="update-button"
+                        color="success"
+                        onClick={handleUpdate}
+                        hidden={!isEdit}>
+                        <CheckCircleOutlineIcon/></Button>
                 </div>
             </div>
             <div className="profile-details">
                 <div className="profile-picture">
-                    <Avatar src={userDetails.image} sx={{width: 200, height: 200}}/>
+                    <Avatar src={updateUser.image} sx={{width: 200, height: 200}}/>
+                   <Button component="label"
+                           role={undefined}
+                           variant="outlined"
+                           tabIndex={-1}
+                           className="upload-button mt-5"
+                   hidden={!isEdit}>
+                       Upload file
+                       <VisuallyHiddenInput type="file" name="image" onChange={handleUpdateImage} accept="image/*"/>
+                   </Button>
                 </div>
                 <div className="profile-info">
                     <form className="project-form">
                         <div className="name-form form-group">
                             <div className="prefix-container">
-                                <InputLabel id="prefix">Prefix</InputLabel>
-                                <Select onChange={handleChange}
-                                        value={updateUser.prefix}
+                                <FormControl fullWidth>
+                                    <InputLabel id="prefix">Prefix</InputLabel>
+                                    <Select
+                                        value={userDetails.prefix || updateUser.prefix}
                                         labelId="prefix"
-                                        id="prefix"
-                                        name="prefix" label="prefix"
-                                        className="prefix">
-                                    <MenuItem value="mr">Mr.</MenuItem>
-                                    <MenuItem value="mrs">Mrs.</MenuItem>
-                                    <MenuItem value="miss">Miss</MenuItem>
-                                    <MenuItem value="Dr.">Dr.</MenuItem>
-                                </Select>
+                                        name="prefix"
+                                        label="Prefix"
+                                        onChange={handleChange}
+                                        disabled={!isEdit}
+                                    >
+                                        <MenuItem value="Mr.">Mr.</MenuItem>
+                                        <MenuItem value="Mrs.">Mrs.</MenuItem>
+                                        <MenuItem value="Miss.">Miss.</MenuItem>
+                                        <MenuItem value="Dr.">Dr.</MenuItem>
+                                    </Select>
+                                </FormControl>
                             </div>
-                            <TextField label="Name" type={"text"} value={userDetails.name} name="name"
-                                       onChange={handleChange}/>
+                            <TextField label="Name" type={"text"} value={updateUser.name} name="name"
+                                       onChange={handleChange} disabled={!isEdit} focused={isEdit}/>
                         </div>
                         <div className="form-group">
-                            <TextField label="Email" type={"email"} value={userDetails.email} name="email"
-                                       onChange={handleChange}/></div>
+                            <TextField label="Email" type={"email"} value={updateUser.email} name="email"
+                                       onChange={handleChange} disabled={!isEdit}/></div>
                         <div className="form-group">
-                            <TextField label="Role" type={"text"} value={userDetails.role} aria-readonly={true}/>
+                            <TextField label="Role" type={"text"} value={userDetails.role || ""} disabled/>
                         </div>
                         <div className="form-group">
-                            <TextField label="Department" type={"text"} value={userDetails.department}/>
+                            <TextField label="Department" type={"text"} value={userDetails.department || ""} disabled/>
                         </div>
                     </form>
                 </div>
