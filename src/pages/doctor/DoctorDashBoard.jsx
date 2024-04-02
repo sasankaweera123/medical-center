@@ -19,7 +19,7 @@ const DoctorDashBoard = () => {
         axios.get(ResourcePath.API + ResourcePath.APPOINTMENTS + "/doctor")
             .then(response => {
                 console.log(response.data.data);
-                const todayAppointments = response.data.data.appointments.filter(appointment => appointment.date === today);
+                const todayAppointments = response.data.data["appointments"].filter(appointment => appointment.date === today);
                 setAppointmentList(todayAppointments);
                 console.log(todayAppointments);
                 setDepartment(response.data.data.department);

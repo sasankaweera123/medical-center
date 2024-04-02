@@ -7,10 +7,14 @@ import axios from "axios";
 import {ResourcePath} from "../dto/ResourcePath";
 
 const AppointmentComponent = (props) => {
+
+    const{doctorId, timeSlot} = props;
+    const {date, fromTime, toTime, availableCount} = timeSlot;
+
     const {users} = useContext(MedicalCenterContext);
     const [show, setShow] = useState(false);
 
-    const doctorId = props.doctorId;
+
     const doctorName = users.find(user => user.id === doctorId).name;
 
     const handelClose = () => {
@@ -33,8 +37,6 @@ const AppointmentComponent = (props) => {
         });
     }
 
-    const timeSlot = props.timeSlot;
-
     return (
         <div className="appointment-component">
             <Card className="card-component available-card" bg="dark" text="white">
@@ -44,15 +46,15 @@ const AppointmentComponent = (props) => {
                             <span>{"Dr. " + doctorName}</span>
                         </Card.Title>
                         <Card.Text>
-                            {timeSlot.date}
+                            {date}
                         </Card.Text>
                         <Card.Text>
-                            {timeSlot.fromTime + " - " + timeSlot.toTime}
+                            {fromTime + " - " + toTime}
                         </Card.Text>
                     </Card.Body>
                     <Card.Body>
                         <Card.Text className="available-capacity">
-                            <span>Available Capacity</span> <span className="count">{timeSlot.availableCount}</span>
+                            <span>Available Capacity</span> <span className="count">{availableCount}</span>
                         </Card.Text>
                     </Card.Body>
                 </div>
@@ -67,8 +69,8 @@ const AppointmentComponent = (props) => {
                     <p>Are you sure you want to book an appointment with </p>
                     <h5>Dr. {doctorName} </h5>
                     <ul>
-                        <li>Date: {timeSlot.date}</li>
-                        <li>Time: {timeSlot.fromTime} - {timeSlot.toTime}</li>
+                        <li>Date: {date}</li>
+                        <li>Time: {fromTime} - {toTime}</li>
                     </ul>
                 </Modal.Body>
                 <Modal.Footer>

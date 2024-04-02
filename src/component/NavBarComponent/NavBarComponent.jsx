@@ -33,6 +33,7 @@ const NavBarComponent = () => {
         window.location.href = ResourcePath.PROFILE;
     }
 
+
     return (
         <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary " bg="dark" data-bs-theme="dark" fixed="top">
             <Container>
@@ -46,7 +47,7 @@ const NavBarComponent = () => {
                     <Button
                         onClick={handleLogout}
                         variant="outlined"
-                        color={`${!isUserLoggedIn ? "primary" : "error"}`}>
+                        color={!isUserLoggedIn ? "primary" : "error"}>
                         {`${isUserLoggedIn ? "LogOut" : "Login"}`}
                     </Button>
                     <Avatar

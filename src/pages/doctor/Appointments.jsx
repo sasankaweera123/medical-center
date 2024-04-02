@@ -4,26 +4,27 @@ import axios from "axios";
 import {ResourcePath} from "../../dto/ResourcePath";
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
 import Card from "react-bootstrap/Card";
+import {Appointment} from "../../dto/Appointment";
 
 const Appointments = () => {
 
     const {users} = useContext(MedicalCenterContext);
-    const [appointmentList, setAppointmentList] = useState([]);
+    const [appointmentList, setAppointmentList] = useState([Appointment]);
     const [department, setDepartment] = useState("");
 
     useEffect(() => {
         axios.get(ResourcePath.API + ResourcePath.APPOINTMENTS + "/doctor")
             .then(response => {
                 console.log(response.data.data);
-                setAppointmentList(response.data.data.appointments);
+                setAppointmentList(response.data.data["appointments"]);
                 setDepartment(response.data.data.department);
             }).catch(err => {
             console.log(err);
         });
     }, []);
 
-    const getNameById = (userId) => {
-        return users.find(user => user.id === userId).name;
+    const getUserById = (userId) => {
+        return users.find(user => user.id === userId);
     }
 
     return (
@@ -42,12 +43,12 @@ const Appointments = () => {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {appointmentList.map(appointment => (
+                            {appointmentList &&  appointmentList.map(appointment => (
                                 <TableRow key={appointment.id}>
                                     <TableCell>{appointment.date}</TableCell>
                                     <TableCell>{appointment.fromTime}</TableCell>
                                     <TableCell>{appointment.toTime}</TableCell>
-                                    <TableCell>{getNameById(appointment.patientId)}</TableCell>
+                                    <TableCell>{appointment.patientId ? getUserById(appointment.patientId).name :""}</TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>

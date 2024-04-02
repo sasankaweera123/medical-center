@@ -17,7 +17,7 @@
       "responses": [
         {
           "uuid": "6fa745b4-9559-45d6-be32-3622dbcc6a34",
-          "body": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzdXBlcm1hbiIsImVtYWlsIjoic3VwZXJtYW5AZ21haWwuY29tIiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6ImFkbWluIiwiaW1hZ2UiOiJodHRwczovL3JvYm9oYXNoLm9yZy9UZXJyeS5wbmc_c2V0PXNldDQiLCJpYXQiOjE2MzU3NzM5NjIsImV4cCI6MTYzNTc3NzU2Mn0.tMwvhLvppaNw6p-vFWs6SpdMfhh0EWoHQSkO0N9IAOE\"\n}",
+          "body": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzdXBlcm1hbiIsImVtYWlsIjoic3VwZXJtYW5AZ21haWwuY29tIiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6ImRvY3RvciIsImltYWdlIjoiaHR0cHM6Ly9yb2JvaGFzaC5vcmcvVGVycnkucG5nP3NldD1zZXQ0IiwiaWF0IjoxNjM1NzczOTYyLCJleHAiOjE2MzU3Nzc1NjJ9.Lp6U0OrhTKbjHUf-ZxLC_kQekzaaA83S_kyTktY9qXI\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
