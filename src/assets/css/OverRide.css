@@ -1,0 +1,41 @@
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root,
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root,
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root,
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    width: 100%;
+    color: #F5F5F5 !important;
+}
+
+.MuiChartsLegend-series text {
+    fill: #F5F5F5 !important;
+}
+
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root,
+.css-1ex1afd-MuiTableCell-root {
+    background-color: #181818 !important;
+    color: #F5F5F5 !important;
+    text-align: center !important;
+}
+
+.css-1ygcj2i-MuiTableCell-root {
+    color: #61dafb !important;
+    text-align: center !important;
+    font-size: 1.2rem !important;
+}
+
+label {
+    color: #61dafb !important;
+}
+
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+    color: #61dafb !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input.Mui-disabled,
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.Mui-disabled {
+    -webkit-text-fill-color: #F5F5F5 !important;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border-color: #61dafb !important;
+}

@@ -1,0 +1,115 @@
+.hidden-div {
+    display: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.image-title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #F5F5F5;
+}
+
+.image-icons {
+    width: 35%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.image-icons svg {
+    font-size: 2.5rem;
+}
+
+.image-icons .person-icon {
+    color: #61dafb;
+}
+
+.image-icons .hospital-icon {
+    color: red;
+}
+
+.image-icons .admin-icon {
+    color: chartreuse;
+}
+
+.image-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.card-component {
+    width: 28rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.page-header {
+    text-align: center;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.male {
+    color: #61dafb;
+}
+
+.female {
+    color: #ff69b4;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-group .edit-icon {
+    color: #61dafb;
+}
+
+.button-group .delete-icon {
+    color: red;
+}
+
+.dark-modal .modal-content {
+    background-color: #181818;
+    color: #F5F5F5;
+}
+
+.dark-modal .modal-header,
+.dark-modal .modal-footer {
+    border-color: #181818;
+}
+
+.dark-modal .modal-header button.close {
+    color: #F5F5F5;
+}
+
+.dark-modal .modal-footer button.btn-primary {
+    background-color: #61dafb;
+    border-color: #61dafb;
+}
+
+.dark-modal .modal-footer button.btn-primary:hover {
+    background-color: #61dafb;
+    border-color: #61dafb;
+}

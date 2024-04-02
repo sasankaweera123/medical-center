@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+    .main-banner-desktop {
+        display: none;
+    }
+
+    .main-banner-mobile {
+        display: block;
+        filter: brightness(30%);
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-banner-desktop {
+        display: block;
+        filter: brightness(30%);
+        overflow: hidden;
+    }
+
+    .main-banner-mobile {
+        display: none;
+    }
+}

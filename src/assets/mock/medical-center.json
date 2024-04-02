@@ -1,0 +1,455 @@
+{
+  "uuid": "fb001719-5c93-4c71-90d1-740402305e7a",
+  "lastMigration": 32,
+  "name": "Medical center",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "a0573853-1da8-4780-9827-192ffcede5d2",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/v1/auth",
+      "responses": [
+        {
+          "uuid": "6fa745b4-9559-45d6-be32-3622dbcc6a34",
+          "body": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzdXBlcm1hbiIsImVtYWlsIjoic3VwZXJtYW5AZ21haWwuY29tIiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6ImRvY3RvciIsImltYWdlIjoiaHR0cHM6Ly9yb2JvaGFzaC5vcmcvVGVycnkucG5nP3NldD1zZXQ0IiwiaWF0IjoxNjM1NzczOTYyLCJleHAiOjE2MzU3Nzc1NjJ9.Lp6U0OrhTKbjHUf-ZxLC_kQekzaaA83S_kyTktY9qXI\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "e7ef3e71-172c-45a5-9249-b9b9cce067a4",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/v1/auth/register",
+      "responses": [
+        {
+          "uuid": "58d887c3-c7b1-4788-8185-87c698ed9334",
+          "body": "{\n  \"data\":\"Sucessfully Register\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "dd22e2c2-c67b-4572-a22a-a523f0d358db",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/v1/users",
+      "responses": [
+        {
+          "uuid": "8d9cf5bb-c431-47ab-96de-3b7160e5ed9e",
+          "body": "{\n  \"users\": [\n    {\n      \"id\": \"D0001\",\n      \"prefix\": \"\",\n      \"name\": \"Terry Medhurst\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"male\",\n      \"email\": \"atuny0@sohu.com\",\n      \"image\": \"https://robohash.org/Terry.png?set=set4\",\n      \"department\": \"Marketing\"\n    },\n    {\n      \"id\": \"D0002\",\n      \"prefix\": \"\",\n      \"name\": \"Alice Johnson\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"female\",\n      \"email\": \"alice.johnson@example.com\",\n      \"image\": \"https://robohash.org/Sheldon.png?set=set4\",\n      \"department\": \"HR\"\n    },\n    {\n      \"id\": \"D0003\",\n      \"prefix\": \"\",\n      \"name\": \"Michael Smith\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"male\",\n      \"email\": \"michael.smith@example.com\",\n      \"image\": \"https://robohash.org/Terrill.png?set=set4\",\n      \"department\": \"Finance\"\n    },\n    {\n      \"id\": \"D0004\",\n      \"prefix\": \"\",\n      \"name\": \"Emily Brown\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"female\",\n      \"email\": \"emily.brown@example.com\",\n      \"image\": \"https://robohash.org/Miles.png?set=set4\",\n      \"department\": \"IT\"\n    },\n    {\n      \"id\": \"D0005\",\n      \"prefix\": \"\",\n      \"name\": \"David Miller\",\n      \"role\": \"Staff Member\",\n      \"gender\": \"male\",\n      \"email\": \"david.miller@example.com\",\n      \"image\": \"https://robohash.org/Mavis.png?set=set4\",\n      \"department\": \"Sales\"\n    },\n    {\n      \"id\": \"D0006\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Sarah Chang\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"sarah.chang@example.com\",\n      \"image\": \"https://robohash.org/Alison.png?set=set4\",\n      \"department\": \"Cardiology\"\n    },\n    {\n      \"id\": \"D0007\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Kevin Nguyen\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"kevin.nguyen@example.com\",\n      \"image\": \"https://robohash.org/Oleta.png?set=set4\",\n      \"department\": \"Neurology\"\n    },\n    {\n      \"id\": \"D0008\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Maria Garcia\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"maria.garcia@example.com\",\n      \"image\": \"https://robohash.org/Maria.png?set=set4\",\n      \"department\": \"Pediatrics\"\n    },\n    {\n      \"id\": \"D0009\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Jonathan Lee\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"jonathan.lee@example.com\",\n      \"image\": \"https://robohash.org/Ewell.png?set=set4\",\n      \"department\": \"Orthopedics\"\n    },\n    {\n      \"id\": \"D0010\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Anna Wang\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"anna.wang@example.com\",\n      \"image\": \"https://robohash.org/Anna.png?set=set4\",\n      \"department\": \"Oncology\"\n    },\n    {\n      \"id\": \"D0011\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"William Jones\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"william.jones@example.com\",\n      \"image\": \"https://robohash.org/Ewell.png?set=set4\",\n      \"department\": \"Dermatology\"\n    },\n    {\n      \"id\": \"D0012\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Jennifer White\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"jennifer.white@example.com\",\n      \"image\": \"https://robohash.org/Jennifer.png?set=set4\",\n      \"department\": \"Endocrinology\"\n    },\n    {\n      \"id\": \"D0013\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Robert Davis\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"robert.davis@example.com\",\n      \"image\": \"https://robohash.org/Robert.png?set=set4\",\n      \"department\": \"Gastroenterology\"\n    },\n    {\n      \"id\": \"D0014\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Samantha Wilson\",\n      \"role\": \"Doctor\",\n      \"gender\": \"female\",\n      \"email\": \"samantha.wilson@example.com\",\n      \"image\": \"https://robohash.org/Samantha.png?set=set4\",\n      \"department\": \"Hematology\"\n    },\n    {\n      \"id\": \"D0015\",\n      \"prefix\": \"Dr.\",\n      \"name\": \"Daniel Martinez\",\n      \"role\": \"Doctor\",\n      \"gender\": \"male\",\n      \"email\": \"daniel.martinez@example.com\",\n      \"image\": \"https://robohash.org/Ewell.png?set=set4\",\n      \"department\": \"Radiology\"\n    },\n    {\n      \"id\": \"P0001\",\n      \"prefix\": \"\",\n      \"name\": \"Emma Thompson\",\n      \"role\": \"Patient\",\n      \"gender\": \"female\",\n      \"email\": \"emma.thompson@example.com\",\n      \"image\": \"https://robohash.org/Emma.png?set=set4\",\n      \"department\": \"\"\n    },\n    {\n      \"id\": \"P0002\",\n      \"prefix\": \"\",\n      \"name\": \"James Wilson\",\n      \"role\": \"Patient\",\n      \"gender\": \"male\",\n      \"email\": \"james.wilson@example.com\",\n      \"image\": \"https://robohash.org/James.png?set=set4\",\n      \"department\": \"\"\n    },\n    {\n      \"id\": \"P0003\",\n      \"prefix\": \"\",\n      \"name\": \"Sophia Garcia\",\n      \"role\": \"Patient\",\n      \"gender\": \"female\",\n      \"email\": \"sophia.garcia@example.com\",\n      \"image\": \"https://robohash.org/Sophia.png?set=set4\",\n      \"department\": \"\"\n    },\n    {\n      \"id\": \"P0004\",\n      \"prefix\": \"\",\n      \"name\": \"Liam Brown\",\n      \"role\": \"Patient\",\n      \"gender\": \"male\",\n      \"email\": \"liam.brown@example.com\",\n      \"image\": \"https://robohash.org/Liam.png?set=set4\",\n      \"department\": \"\"\n    },\n    {\n      \"id\": \"P0005\",\n      \"prefix\": \"\",\n      \"name\": \"Olivia Martinez\",\n      \"role\": \"Patient\",\n      \"gender\": \"female\",\n      \"email\": \"olivia.martinez@example.com\",\n      \"image\": \"https://robohash.org/Olivia.png?set=set4\",\n      \"department\": \"\"\n    },\n    {\n      \"id\": \"P0006\",\n      \"prefix\": \"\",\n      \"name\": \"Noah Johnson\",\n      \"role\": \"Patient\",\n      \"gender\": \"male\",\n      \"email\": \"noah.johnson@example.com\",\n      \"image\": \"https://robohash.org/Noah.png?set=set4\",\n      \"department\": \"\"\n    },\n    {\n      \"id\": \"P0007\",\n      \"prefix\": \"\",\n      \"name\": \"Ava Lee\",\n      \"role\": \"Patient\",\n      \"gender\": \"female\",\n      \"email\": \"ava.lee@example.com\",\n      \"image\": \"https://robohash.org/Ava.png?set=set4\",\n      \"department\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "e43de2fe-568e-4b3f-8969-c9913f3aa35c",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/v1/appointment/available",
+      "responses": [
+        {
+          "uuid": "ef271cdd-2271-47b9-900d-9583b1eff4c0",
+          "body": "{\n  \"data\": [\n    {\n      \"doctorId\": \"D0006\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"09:00\",\n          \"toTime\": \"10:00\",\n          \"availableCount\": 3\n        },\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"10:00\",\n          \"toTime\": \"11:00\",\n          \"availableCount\": 2\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0007\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"11:00\",\n          \"toTime\": \"12:00\",\n          \"availableCount\": 1\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0008\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"13:00\",\n          \"toTime\": \"14:00\",\n          \"availableCount\": 4\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0009\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"14:00\",\n          \"toTime\": \"15:00\",\n          \"availableCount\": 2\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0010\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"15:00\",\n          \"toTime\": \"16:00\",\n          \"availableCount\": 5\n        }\n      ]\n    },\n    {\n      \"doctorId\": \"D0011\",\n      \"dateTime\": [\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"16:00\",\n          \"toTime\": \"17:00\",\n          \"availableCount\": 3\n        },\n        {\n          \"date\": \"2024-03-28\",\n          \"fromTime\": \"17:00\",\n          \"toTime\": \"18:00\",\n          \"availableCount\": 4\n        }\n      ]\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "6ab2bd76-4af7-44d9-b6b8-08ac3e796796",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/v1/appointment/create",
+      "responses": [
+        {
+          "uuid": "eb6f17c4-885f-425d-8e96-46173735f276",
+          "body": "{\n  \"data\": \"Sucessfully Created\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "b76364f0-f4c8-45c0-93fe-c291c153daf5",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "api/v1/user/update",
+      "responses": [
+        {
+          "uuid": "b2b96a31-25fe-49e1-881a-8e1ba26ad566",
+          "body": "{\n  \"data\": \"Sucessfully User Updated\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "505692cf-7afe-4512-9c29-bafed8e4b953",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "api/v1/user/delete/:id",
+      "responses": [
+        {
+          "uuid": "d12a2ddb-34e0-4465-8ff7-64d948a868b9",
+          "body": "{\n  \"data\": \"Sucessfully Deleted\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "7885b47e-16fd-4397-808a-f3a7a79aad02",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/v1/appointment",
+      "responses": [
+        {
+          "uuid": "b1ae3a76-6379-4ccb-ac0d-34e12857136a",
+          "body": "{\r\n  \"data\": [\r\n    {\r\n      \"id\": \"A0001\",\r\n      \"doctorId\": \"D0006\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0001\",\r\n          \"patientId\": \"P0001\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"09:00 AM\",\r\n          \"status\": \"Confirm\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0002\",\r\n          \"patientId\": \"P0002\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"11:00 AM\",\r\n          \"status\": \"Cancel\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0003\",\r\n          \"patientId\": \"P0005\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"02:00 PM\",\r\n          \"status\": \"Pending\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"id\": \"A0002\",\r\n      \"doctorId\": \"D0007\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0004\",\r\n          \"patientId\": \"P0003\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"10:00 AM\",\r\n          \"status\": \"Pending\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0005\",\r\n          \"patientId\": \"P0006\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"12:00 PM\",\r\n          \"status\": \"Confirm\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0006\",\r\n          \"patientId\": \"P0007\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"03:00 PM\",\r\n          \"status\": \"Pending\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"id\": \"A0003\",\r\n      \"doctorId\": \"D0008\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0007\",\r\n          \"patientId\": \"P0004\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"08:00 AM\",\r\n          \"status\": \"Pending\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0008\",\r\n          \"patientId\": \"P0001\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"01:00 PM\",\r\n          \"status\": \"Cancel\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0009\",\r\n          \"patientId\": \"P0002\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"04:00 PM\",\r\n          \"status\": \"Confirm\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"id\": \"A0004\",\r\n      \"doctorId\": \"D0009\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0010\",\r\n          \"patientId\": \"P0003\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"09:30 AM\",\r\n          \"status\": \"Confirm\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0011\",\r\n          \"patientId\": \"P0006\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"12:30 PM\",\r\n          \"status\": \"Pending\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0012\",\r\n          \"patientId\": \"P0007\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"03:30 PM\",\r\n          \"status\": \"Pending\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"id\": \"A0005\",\r\n      \"doctorId\": \"D0010\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0013\",\r\n          \"patientId\": \"P0004\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"11:30 AM\",\r\n          \"status\": \"Pending\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0014\",\r\n          \"patientId\": \"P0001\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"02:30 PM\",\r\n          \"status\": \"Cancel\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0015\",\r\n          \"patientId\": \"P0002\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"04:30 PM\",\r\n          \"status\": \"Confirm\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"id\": \"A0006\",\r\n      \"doctorId\": \"D0011\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0016\",\r\n          \"patientId\": \"P0003\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"08:30 AM\",\r\n          \"status\": \"Confirm\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0017\",\r\n          \"patientId\": \"P0006\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"01:30 PM\",\r\n          \"status\": \"Cancel\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0018\",\r\n          \"patientId\": \"P0007\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"04:30 PM\",\r\n          \"status\": \"Pending\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"id\": \"A0007\",\r\n      \"doctorId\": \"D0012\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0019\",\r\n          \"patientId\": \"P0004\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"10:30 AM\",\r\n          \"status\": \"Pending\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0020\",\r\n          \"patientId\": \"P0001\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"01:30 PM\",\r\n          \"status\": \"Confirm\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0021\",\r\n          \"patientId\": \"P0002\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"05:30 PM\",\r\n          \"status\": \"Pending\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"id\": \"A0008\",\r\n      \"doctorId\": \"D0013\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0022\",\r\n          \"patientId\": \"P0003\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"09:00 AM\",\r\n          \"status\": \"Pending\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0023\",\r\n          \"patientId\": \"P0006\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"12:00 PM\",\r\n          \"status\": \"Confirm\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0024\",\r\n          \"patientId\": \"P0007\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"03:00 PM\",\r\n          \"status\": \"Cancel\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"id\": \"A0009\",\r\n      \"doctorId\": \"D0014\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0025\",\r\n          \"patientId\": \"P0004\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"10:00 AM\",\r\n          \"status\": \"Cancel\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0026\",\r\n          \"patientId\": \"P0001\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"01:00 PM\",\r\n          \"status\": \"Pending\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0027\",\r\n          \"patientId\": \"P0002\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"04:00 PM\",\r\n          \"status\": \"Confirm\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"id\": \"A0010\",\r\n      \"doctorId\": \"D0015\",\r\n      \"doctorAppointments\": [\r\n        {\r\n          \"appointmentId\": \"AP0028\",\r\n          \"patientId\": \"P0003\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"11:00 AM\",\r\n          \"status\": \"Confirm\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0029\",\r\n          \"patientId\": \"P0006\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"02:00 PM\",\r\n          \"status\": \"Pending\"\r\n        },\r\n        {\r\n          \"appointmentId\": \"AP0030\",\r\n          \"patientId\": \"P0007\",\r\n          \"date\": \"2024-03-29\",\r\n          \"time\": \"05:00 PM\",\r\n          \"status\": \"Cancel\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "c78655dd-e079-43dd-9e9a-3fd42972b18b",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "api/v1/appointment/:id",
+      "responses": [
+        {
+          "uuid": "714617f0-a59c-45d7-99c8-7e14b26a2300",
+          "body": "{\n  \"data\": \"Sucessfully Updated\";\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "7c6582a4-b024-4ca5-8b66-25e6c9045dd9",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/v1/appointment/doctor",
+      "responses": [
+        {
+          "uuid": "94731d7b-2673-44be-b0ee-677202239425",
+          "body": "{\n  \"data\": {\n    \"department\": \"Neurology\",\n    \"appointments\": [\n      {\n        \"id\": \"N0001\",\n        \"date\": \"2024-04-01\",\n        \"fromTime\": \"09:00 AM\",\n        \"toTime\": \"10:00 AM\",\n        \"patientId\": \"P0001\"\n      },\n      {\n        \"id\": \"N0002\",\n        \"date\": \"2024-04-01\",\n        \"fromTime\": \"11:00 AM\",\n        \"toTime\": \"12:00 PM\",\n        \"patientId\": \"P0002\"\n      },\n      {\n        \"id\": \"N0003\",\n        \"date\": \"2024-04-01\",\n        \"fromTime\": \"02:00 PM\",\n        \"toTime\": \"03:00 PM\",\n        \"patientId\": \"P0003\"\n      },\n      {\n        \"id\": \"N0004\",\n        \"date\": \"2024-04-01\",\n        \"fromTime\": \"03:00 PM\",\n        \"toTime\": \"04:00 PM\",\n        \"patientId\": \"P0004\"\n      },\n      {\n        \"id\": \"N0005\",\n        \"date\": \"2024-04-01\",\n        \"fromTime\": \"04:00 PM\",\n        \"toTime\": \"05:00 PM\",\n        \"patientId\": \"P0005\"\n      },\n      {\n        \"id\": \"N0006\",\n        \"date\": \"2024-04-01\",\n        \"fromTime\": \"05:00 PM\",\n        \"toTime\": \"06:00 PM\",\n        \"patientId\": \"P0006\"\n      },\n      {\n        \"id\": \"N0007\",\n        \"date\": \"2024-04-01\",\n        \"fromTime\": \"06:00 PM\",\n        \"toTime\": \"07:00 PM\",\n        \"patientId\": \"P0007\"\n      },\n      {\n        \"id\": \"N0008\",\n        \"date\": \"2024-04-02\",\n        \"fromTime\": \"10:00 AM\",\n        \"toTime\": \"11:00 AM\",\n        \"patientId\": \"P0001\"\n      },\n      {\n        \"id\": \"N0009\",\n        \"date\": \"2024-04-02\",\n        \"fromTime\": \"11:00 AM\",\n        \"toTime\": \"12:00 PM\",\n        \"patientId\": \"P0002\"\n      },\n      {\n        \"id\": \"N0010\",\n        \"date\": \"2024-04-02\",\n        \"fromTime\": \"02:00 PM\",\n        \"toTime\": \"03:00 PM\",\n        \"patientId\": \"P0003\"\n      },\n      {\n        \"id\": \"N0011\",\n        \"date\": \"2024-04-02\",\n        \"fromTime\": \"03:00 PM\",\n        \"toTime\": \"04:00 PM\",\n        \"patientId\": \"P0004\"\n      },\n      {\n        \"id\": \"N0012\",\n        \"date\": \"2024-04-02\",\n        \"fromTime\": \"04:00 PM\",\n        \"toTime\": \"05:00 PM\",\n        \"patientId\": \"P0005\"\n      },\n      {\n        \"id\": \"N0013\",\n        \"date\": \"2024-04-02\",\n        \"fromTime\": \"05:00 PM\",\n        \"toTime\": \"06:00 PM\",\n        \"patientId\": \"P0006\"\n      },\n      {\n        \"id\": \"N0014\",\n        \"date\": \"2024-04-02\",\n        \"fromTime\": \"06:00 PM\",\n        \"toTime\": \"07:00 PM\",\n        \"patientId\": \"P0007\"\n      },\n      {\n        \"id\": \"N0015\",\n        \"date\": \"2024-04-03\",\n        \"fromTime\": \"09:00 AM\",\n        \"toTime\": \"10:00 AM\",\n        \"patientId\": \"P0001\"\n      },\n      {\n        \"id\": \"N0016\",\n        \"date\": \"2024-04-03\",\n        \"fromTime\": \"10:00 AM\",\n        \"toTime\": \"11:00 AM\",\n        \"patientId\": \"P0002\"\n      },\n      {\n        \"id\": \"N0017\",\n        \"date\": \"2024-04-03\",\n        \"fromTime\": \"02:00 PM\",\n        \"toTime\": \"03:00 PM\",\n        \"patientId\": \"P0003\"\n      },\n      {\n        \"id\": \"N0018\",\n        \"date\": \"2024-04-03\",\n        \"fromTime\": \"03:00 PM\",\n        \"toTime\": \"04:00 PM\",\n        \"patientId\": \"P0004\"\n      },\n      {\n        \"id\": \"N0019\",\n        \"date\": \"2024-04-03\",\n        \"fromTime\": \"04:00 PM\",\n        \"toTime\": \"05:00 PM\",\n        \"patientId\": \"P0005\"\n      },\n      {\n        \"id\": \"N0020\",\n        \"date\": \"2024-04-03\",\n        \"fromTime\": \"05:00 PM\",\n        \"toTime\": \"06:00 PM\",\n        \"patientId\": \"P0006\"\n      },\n      {\n        \"id\": \"N0021\",\n        \"date\": \"2024-04-03\",\n        \"fromTime\": \"06:00 PM\",\n        \"toTime\": \"07:00 PM\",\n        \"patientId\": \"P0007\"\n      },\n      {\n        \"id\": \"N0022\",\n        \"date\": \"2024-04-04\",\n        \"fromTime\": \"10:00 AM\",\n        \"toTime\": \"11:00 AM\",\n        \"patientId\": \"P0001\"\n      },\n      {\n        \"id\": \"N0023\",\n        \"date\": \"2024-04-04\",\n        \"fromTime\": \"11:00 AM\",\n        \"toTime\": \"12:00 PM\",\n        \"patientId\": \"P0002\"\n      },\n      {\n        \"id\": \"N0024\",\n        \"date\": \"2024-04-04\",\n        \"fromTime\": \"02:00 PM\",\n        \"toTime\": \"03:00 PM\",\n        \"patientId\": \"P0003\"\n      },\n      {\n        \"id\": \"N0025\",\n        \"date\": \"2024-04-04\",\n        \"fromTime\": \"03:00 PM\",\n        \"toTime\": \"04:00 PM\",\n        \"patientId\": \"P0004\"\n      }\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "078cbef6-92f5-43e5-96e9-8c3bdbee0973",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/v1/appointment/:id",
+      "responses": [
+        {
+          "uuid": "464d5f0e-e9f9-4df2-9221-0ce5f007e2ac",
+          "body": "{\n  \"data\": [\n    {\n      \"doctorId\": \"D0007\",\n      \"date\": \"2024-04-01\",\n      \"fromTime\": \"09:00 AM\",\n      \"toTime\": \"10:00 AM\",\n      \"status\": \"Confirm\"\n    },\n    {\n      \"doctorId\": \"D0007\",\n      \"date\": \"2024-04-02\",\n      \"fromTime\": \"11:00 AM\",\n      \"toTime\": \"12:00 PM\",\n      \"status\": \"Pending\"\n    },\n    {\n      \"doctorId\": \"D0008\",\n      \"date\": \"2024-04-03\",\n      \"fromTime\": \"02:00 PM\",\n      \"toTime\": \"03:00 PM\",\n      \"status\": \"Cancel\"\n    },\n    {\n      \"doctorId\": \"D0009\",\n      \"date\": \"2024-04-04\",\n      \"fromTime\": \"03:00 PM\",\n      \"toTime\": \"04:00 PM\",\n      \"status\": \"Confirm\"\n    },\n    {\n      \"doctorId\": \"D0007\",\n      \"date\": \"2024-04-05\",\n      \"fromTime\": \"10:00 AM\",\n      \"toTime\": \"11:00 AM\",\n      \"status\": \"Pending\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "eda9e844-88b0-47cf-95ce-3e3993c87e07",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/v1/user/:id",
+      "responses": [
+        {
+          "uuid": "4dbcea06-3832-495e-8a7a-5e0e9a7ad45b",
+          "body": "{\n  \"id\": \"D0001\",\n  \"prefix\": \"Mr.\",\n  \"name\": \"Terry Medhurst\",\n  \"role\": \"Staff Member\",\n  \"gender\": \"male\",\n  \"email\": \"atuny0@sohu.com\",\n  \"image\": \"https://robohash.org/Terry.png?set=set4\",\n  \"department\": \"Marketing\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "a0573853-1da8-4780-9827-192ffcede5d2"
+    },
+    {
+      "type": "route",
+      "uuid": "e7ef3e71-172c-45a5-9249-b9b9cce067a4"
+    },
+    {
+      "type": "route",
+      "uuid": "dd22e2c2-c67b-4572-a22a-a523f0d358db"
+    },
+    {
+      "type": "route",
+      "uuid": "e43de2fe-568e-4b3f-8969-c9913f3aa35c"
+    },
+    {
+      "type": "route",
+      "uuid": "6ab2bd76-4af7-44d9-b6b8-08ac3e796796"
+    },
+    {
+      "type": "route",
+      "uuid": "b76364f0-f4c8-45c0-93fe-c291c153daf5"
+    },
+    {
+      "type": "route",
+      "uuid": "505692cf-7afe-4512-9c29-bafed8e4b953"
+    },
+    {
+      "type": "route",
+      "uuid": "7885b47e-16fd-4397-808a-f3a7a79aad02"
+    },
+    {
+      "type": "route",
+      "uuid": "c78655dd-e079-43dd-9e9a-3fd42972b18b"
+    },
+    {
+      "type": "route",
+      "uuid": "7c6582a4-b024-4ca5-8b66-25e6c9045dd9"
+    },
+    {
+      "type": "route",
+      "uuid": "078cbef6-92f5-43e5-96e9-8c3bdbee0973"
+    },
+    {
+      "type": "route",
+      "uuid": "eda9e844-88b0-47cf-95ce-3e3993c87e07"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
