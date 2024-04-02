@@ -10,6 +10,7 @@
 
 # production
 /build
+/sonarqube
 
 # misc
 .DS_Store
